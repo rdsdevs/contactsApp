@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php require "partials/header.php" ?>
 
 <div>
-  <div class="card-header">Registrate aquí</div>
+  <div>Registrate aquí</div>
   <div>
     <?php if ($error): ?>
       <p style="color:darkred">
