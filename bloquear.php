@@ -1,17 +1,16 @@
 <?php
+session_start();
+session_destroy();
 
 require_once "conexion.php";
 
 $error = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["email"]) || empty($_POST["password"])) {
-    $error = "Por favor complete todos los campos.";
-  } else if (!str_contains($_POST["email"], "@")) {
-    $error = "El formato del correo electrónico es incorrecto.";
+  if (empty($_POST["password"])) {
   } else {
     $statement = $conn->prepare("SELECT * FROM users WHERE email = :email LIMIT 1");
-    $statement->bindParam(":email", $_POST["email"]);
+    $statement->bindParam(":email", $_COOKIE["user"]);
     $statement->execute();
 
     if ($statement->rowCount() == 0) {
@@ -24,8 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       } else {
         session_start();
 
-        setcookie("user", $user["email"], time() + 1 * 24 * 60 * 60);
-        setcookie("name", $user["name"], time() + 1 * 24 * 60 * 60);
         unset($user["password"]);
         $_SESSION["user"] = $user;
 
@@ -35,20 +32,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 ?>
-
-<?php require "partials/header.php" ?>
-
 <div>
-  <div>Inicia sesión para gestionar tus contactos</div>
+  <div>Recuperar sesión</div>
   <div>
     <?php if ($error): ?>
       <p style="color: darkred">
         <?= $error ?>
       </p>
     <?php endif ?>
-    <form method="POST" action="login.php">
+    <form method="POST" action="bloquear.php">
       <div style="margin-bottom: 1rem;">
-        <input type="email" name="email" placeholder="Correo" autocomplete="email" autofocus>
+        <span style="font-weight: bold;"><?php echo $_COOKIE['name']; ?></span>
       </div>
 
       <div style="margin-bottom: 1rem;">
@@ -61,5 +55,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
   </div>
 </div>
-
-<?php require "partials/footer.php" ?>

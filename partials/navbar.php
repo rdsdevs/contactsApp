@@ -13,11 +13,14 @@
             <a href="agregar.php">Agregar contacto</a>
           </li>
           <li>
+            <a href="bloquear.php">Bloquear sesión</a>
+          </li>
+          <li>
             <a href="logout.php">Cerrar sesión</a>
           </li>
         <?php else: ?>
           <li>
-            <a href="registrar">Registrate</a>
+            <a href="registrar.php">Registrate</a>
           </li>
           <li>
             <a href="login.php">Iniciar sesión</a>
@@ -26,7 +29,7 @@
       </ul>
       <?php if (isset($_SESSION["user"])): ?>
         <div class="p-2">
-          <?= $_SESSION["user"]["email"] ?>
+          <?= $_SESSION["user"]["name"] ?>
         </div>
       <?php endif ?>
     </div>
