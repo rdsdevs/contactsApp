@@ -7,8 +7,6 @@ $error = null;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["password"])) {
     $error = "Por favor complete todos los campos.";
-    var_dump(!str_contains($_POST["email"], "@"));
-    die();
   } else if (!str_contains($_POST["email"], "@")) {
     $error = "El formato del correo electrónico es incorrecto.";
   } else {
@@ -51,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?= $error ?>
       </p>
     <?php endif ?>
-    <form method="POST" action="registrar">
+    <form method="POST" action="registrar.php">
       <!-- Nombre -->
       <div style="margin-bottom: 1rem;">
         <input type="text" name="name" placeholder="Nombre" autocomplete="nombre" autofocus>

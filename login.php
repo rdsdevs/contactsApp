@@ -24,11 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       } else {
         session_start();
 
-        setcookie("user", $user["email"], time() + 1 * 24 * 60 * 60);
-        setcookie("name", $user["name"], time() + 1 * 24 * 60 * 60);
+        setcookie("user", $user["email"], time() + 20 * 24 * 60 * 60);
+        setcookie("name", $user["name"], time() + 20 * 24 * 60 * 60);
         unset($user["password"]);
         $_SESSION["user"] = $user;
-
         header("Location: inicio.php");
       }
     }
