@@ -1,0 +1,17 @@
+.navbar img {
+  width: 1.2rem;
+}
+
+div.position-relative {
+  margin-top: 7rem;
+}
+
+.whatsapp {
+  color: #25d366 !important;
+}
+
+.welcome {
+  background: url("/contactsApp/static/img/background.jpg");
+  background-position: center center;
+  background-size: cover;
+}

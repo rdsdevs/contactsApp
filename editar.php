@@ -56,27 +56,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php require "partials/header.php" ?>
 
-<div>
-  <div>
-    <div>Editar contacto</div>
-    <?php if ($error): ?>
-      <p style="color:darkorange">
-        <?= $error ?>
-      </p>
-    <?php endif ?>
-    <form method="POST" action="editar.php?id=<?= $contact['id'] ?>">
-      <div style="margin-bottom: 1rem">
-        <input value="<?= $contact['name'] ?>" type="text" name="name" autocomplete="name" autofocus>
-      </div>
+<div class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header"><i class="nf nf-fa-user_pen text-warning"></i> Editar contacto</div>
+        <div class="card-body">
+          <?php if ($error): ?>
+            <p class="text-danger">
+              <?= $error ?>
+            </p>
+          <?php endif ?>
+          <form method="POST" action="editar.php?id=<?= $contact['id'] ?>">
+            <div class="mb-3">
+              <input value="<?= $contact['name'] ?>" type="text" class="form-control" name="name" autocomplete="name"
+                autofocus>
+            </div>
 
-      <div style="margin-bottom: 1rem">
-        <input value="<?= $contact['phone_number'] ?>" name="phone_number" autocomplete="phone_number" autofocus>
-      </div>
+            <div class="mb-3">
+              <input value="<?= $contact['phone_number'] ?>" type="text" class="form-control" name="phone_number"
+                autocomplete="phone_number" autofocus>
+            </div>
 
-      <div style="margin-bottom: 1rem">
-        <input type="submit" class="btn btn-primary" value="Editar contacto">
+            <button type="submit" class="btn btn-outline-warning float-end">Editar contacto</button>
+          </form>
+        </div>
       </div>
-    </form>
+    </div>
   </div>
 </div>
 

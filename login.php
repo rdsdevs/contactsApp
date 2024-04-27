@@ -37,27 +37,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php require "partials/header.php" ?>
 
-<div>
-  <div>Inicia sesión para gestionar tus contactos</div>
-  <div>
-    <?php if ($error): ?>
-      <p style="color: darkred">
-        <?= $error ?>
-      </p>
-    <?php endif ?>
-    <form method="POST" action="login.php">
-      <div style="margin-bottom: 1rem;">
-        <input type="email" name="email" placeholder="Correo" autocomplete="email" autofocus>
-      </div>
+<div class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header"><i class="nf nf-fa-user_shield whatsapp"></i> Inicia sesión para gestionar tus
+          contactos
+        </div>
+        <div class="card-body">
+          <?php if ($error): ?>
+            <p class="text-danger">
+              <?= $error ?>
+            </p>
+          <?php endif ?>
+          <form method="POST" action="login.php">
+            <div class="mb-3">
+              <input type="email" class="form-control" name="email" placeholder="Correo" autocomplete="email" autofocus>
+            </div>
 
-      <div style="margin-bottom: 1rem;">
-        <input type="password" name="password" placeholder="Contraseña" autocomplete="password" autofocus>
-      </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" name="password" placeholder="Contraseña"
+                autocomplete="password" autofocus>
+            </div>
 
-      <div style="margin-bottom: 1rem;">
-        <input type="submit" value="Iniciar sesión">
+            <button type="submit" class="btn btn-outline-success float-end">Iniciar sesión</button>
+          </form>
+        </div>
       </div>
-    </form>
+    </div>
   </div>
 </div>
 

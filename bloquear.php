@@ -32,26 +32,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 ?>
-<div>
-  <div>Recuperar sesión</div>
-  <div>
-    <?php if ($error): ?>
-      <p style="color: darkred">
-        <?= $error ?>
-      </p>
-    <?php endif ?>
-    <form method="POST" action="bloquear.php">
-      <div style="margin-bottom: 1rem;">
-        <span style="font-weight: bold;"><?php echo $_COOKIE['name']; ?></span>
-      </div>
+<?php require "partials/header.php" ?>
+<div class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header"><i class="nf nf-fa-user_lock whatsapp"></i> Recuperar sesión</div>
+        <div class="card-body">
+          <?php if ($error): ?>
+            <p class="text-danger">
+              <?= $error ?>
+            </p>
+          <?php endif ?>
+          <form method="POST" action="bloquear.php">
+            <div class="mb-3">
+              <p class="h4 text-center"><?php echo $_COOKIE['name']; ?></p>
+            </div>
 
-      <div style="margin-bottom: 1rem;">
-        <input type="password" name="password" placeholder="Contraseña" autocomplete="password" autofocus>
-      </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" name="password" placeholder="Contraseña"
+                autocomplete="password" autofocus>
+            </div>
 
-      <div style="margin-bottom: 1rem;">
-        <input type="submit" value="Iniciar sesión">
+            <button type="submit" class="btn btn-outline-success float-end">Iniciar sesión</button>
+          </form>
+        </div>
       </div>
-    </form>
+    </div>
   </div>
 </div>
+<?php require "partials/footer.php" ?>

@@ -5,6 +5,12 @@
     "[html]": {
         "editor.tabSize": 2
     },
+    "[css]": {
+        "editor.tabSize": 2
+    },
+    "[js]": {
+        "editor.tabSize": 2
+    },
     "files.insertFinalNewline": true,
     "editor.fontSize": 16,
     "editor.lineHeight": 26,
