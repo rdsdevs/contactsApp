@@ -20,11 +20,11 @@ ContactsApp permite gestionar los contactos de un usuario, con ContactsApp podra
 
 A continuación, se detallan los pasos necesarios para instalar y configurar el proyecto en un entorno de desarrollo local.
 
-1. Abre una terminal y ubicate dentro de la carpeta raíz de tu servidor local (www para laragon o htdocs para xampp).
+1. Abre una terminal 👨🏿‍💻 y ubicate dentro de la carpeta raíz de tu servidor local (**www** para laragon o **htdocs** para xampp).
 2. Luego ejecuta el comando `git clone https://github.com/ltoncelDev/contactsApp.git`, para clonar el repositorio.
-3. Ubica la carpeta `db` y ejecuta el script de creación de la base de datos que esta dentro del archico `db.sql`.
-4. Abre :earth_americas:tu navagador de preferencia y en la barra de navegación escribe: `localhost` o `127.0.0.1`.
-5. Ubica en el listado de directorios uno con el nombre del proyecto `contactsApp`, para ver en funcionamiento la aplicación WEB.
+3. Ubica la carpeta **db** y ejecuta el script de creación de la base de datos que esta dentro del archivo **db.sql**.
+4. Abre :earth_americas: tu navagador de preferencia y en la barra de navegación escribe: **localhost** o **127.0.0.1**.
+5. Ubica en el listado de directorios uno con el nombre del proyecto **contactsApp**.
 
 ## 📘 Guía de Uso
 
@@ -47,43 +47,46 @@ Al iniciar la aplicación debes registrarte para tener acceso a la gestión de c
 
 Licencia Pública General de GNU (GPL)
 Versión 3, 29 de junio de 2007
-Puede ver más información en el archivo `LICENSE`.
+Puede ver más información en el archivo **LICENSE**.
 
 ---
 
 ## :open_file_folder: Estructura de carpetas del proyecto
 
-1. ".vscode": En esta carpeta se encuentra el archivo settings.json el cual contiene la configuración del IDE (Entorno de Desarrollo Integrado).
+1. "**.vscode**": En esta carpeta se encuentra el archivo settings.json el cual contiene la configuración del IDE (Entorno de Desarrollo Integrado).
 
-2. "db": Contiene es script de creación de la base de datos del proyecto.
+2. "**db**": Contiene el script de creación de la base de datos del proyecto.
    Archivos contenidos:
-   `db.sql`
-3. "partials": Esta carpeta contiene archivos con fragmentos de código HTML que se incluyen en todas las páginas.
-   Archivos contenidos:
-   `footer.php`
-   `header.php`
-   `navbar.php`
+   **db.sql**
 
-4. "static": La carpeta static, contiene archivos estáticos, como archivos de estilo CSS, scripts JavaScript JS, imágenes, fuentes y otros recursos que no requieren procesamiento del servidor antes de ser entregados al cliente.
+3. "**partials**": Esta carpeta contiene archivos con fragmentos de código HTML que se incluyen en todas las páginas.
    Archivos contenidos:
-   `/css/index.css`
-   `/img/background.jpg`
-   `/img/logo.png`
-   `/js/welcome.js`
+   **footer.php**
+   **header.php**
+   **navbar.php**
+
+4. "**static**": La carpeta static, contiene archivos estáticos, como archivos de estilo CSS, scripts JavaScript JS, imágenes, fuentes y otros recursos que no requieren procesamiento del servidor antes de ser entregados al cliente.
+   Archivos contenidos:
+   **/css/index.css**
+   **/img/background.jpg**
+   **/img/logo.png**
+   **/js/welcome.js**
 
 ## QUE hace el archivo /js/welcome.js
 
-1. Selecciona elementos del DOM (Documento de Objetos del Modelo) usando el método document.querySelector para obtener referencias a los elementos HTML con las clases .navbar y .welcome, así como al elemento con el ID #navbarNav. Estos elementos probablemente son parte de una interfaz de usuario.
+1. Selecciona elementos del DOM (Documento de Objetos del Modelo) usando el método `document.querySelector` para obtener referencias a los elementos HTML con las clases .navbar y .welcome, así como al elemento con el ID #navbarNav.
 
-2. Define una función llamada resizeBackgroundImg que calcula la altura disponible para la imagen de fondo dentro del elemento con la clase .welcome. Esto se hace restando la altura del elemento .navbar al alto de la ventana (window.innerHeight). Luego, actualiza la altura del elemento .welcome con el valor calculado.
+2. Define una función llamada **resizeBackgroundImg** que calcula la altura disponible para la imagen de fondo dentro del elemento con la clase **.welcome**.
+   Esto se hace restando la altura del elemento **.navbar** al alto de la ventana (`window.innerHeight`).
+   Luego, actualiza la altura del elemento **.welcome** con el valor calculado.
 
-3. Asigna la función resizeBackgroundImg a varios eventos. Cuando estos eventos ocurren, la función se ejecutará para ajustar la altura de la imagen de fondo según sea necesario.
+3. Asigna la función **resizeBackgroundImg** a varios eventos. Cuando estos eventos ocurren, la función se ejecutará para ajustar la altura de la imagen de fondo según sea necesario.
    Los eventos incluyen:
-   A. `ontransitionend` y `ontransitionstart` del elemento `navbarToggle`: Estos eventos se activan cuando se completa o comienza una transición en el elemento `navbarToggle`.
-   La transición probablemente esté relacionada con el comportamiento de cambio de la barra de navegación.
+   A. **ontransitionend** y **ontransitionstart** del elemento **navbarToggle**: Estos eventos se activan cuando se completa o comienza una transición en el elemento **navbarToggle**.
+   La transición esta relacionada con el comportamiento de cambio de la barra de navegación.
 
-   B. `onresize` de la ventana (`window`): Este evento se activa cada vez que se redimensiona la ventana del navegador.
+   B. **onresize** de la ventana (**window**): Este evento se activa cada vez que se redimensiona la ventana del navegador.
 
-   C. `onload` de la ventana (`window`): Este evento se activa una vez que se ha cargado completamente el contenido de la ventana del navegador.
+   C. **onload** de la ventana (**window**): Este evento se activa una vez que se ha cargado completamente el contenido de la ventana del navegador.
 
-El código se encarga de ajustar dinámicamente la altura de la imagen de fondo de un elemento con la clase `.welcome` según el tamaño de la ventana del navegador y el comportamiento de transición de la barra de navegación, asegurando que la imagen se vea correctamente en diferentes tamaños de pantalla y durante las transiciones de la barra de navegación.
+El código se encarga de ajustar dinámicamente la altura de la imagen de fondo de un elemento con la clase **.welcome** según el tamaño de la ventana del navegador y el comportamiento de transición de la barra de navegación, asegurando que la imagen se vea correctamente en diferentes tamaños de pantalla y durante las transiciones de la barra de navegación.
