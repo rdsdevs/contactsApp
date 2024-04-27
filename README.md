@@ -11,6 +11,7 @@ ContactsApp es una aplicación WEB que permite gestionar los contactos de un usu
 3. [Guía de Uso](#guía-de-uso)
 4. [Contribución](#contribución)
 5. [Licencia](#licencia)
+6. [Estructura de carpetas del proyecto](#estructura-de-carpetas-del-proyecto)
 
 ## 📝 Descripción
 
@@ -51,7 +52,7 @@ Puede ver más información en el archivo **LICENSE**.
 
 ---
 
-## :open_file_folder: Estructura de carpetas del proyecto
+## Estructura de carpetas del proyecto
 
 1. "**.vscode**": En esta carpeta se encuentra el archivo settings.json el cual contiene la configuración del IDE (Entorno de Desarrollo Integrado).
 
