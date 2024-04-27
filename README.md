@@ -52,7 +52,7 @@ Puede ver más información en el archivo **LICENSE**.
 
 ---
 
-## Estructura de carpetas del proyecto
+## Estructura de carpetas del proyecto 📂
 
 1. "**.vscode**": En esta carpeta se encuentra el archivo settings.json el cual contiene la configuración del IDE (Entorno de Desarrollo Integrado).
 
