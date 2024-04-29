@@ -1,0 +1,36 @@
+{
+    "recommendations": [
+        // Extensiones recomendadas para trabajar con PHP
+        "devsense.phptools-vscode",
+        "xdebug.php-debug",
+        "bmewburn.vscode-intelephense-client",
+        "zobo.php-intellisense",
+        "devsense.profiler-php-vscode",
+        "neilbrayfield.php-docblocker",
+        "devsense.intelli-php-vscode",
+        "mehedidracula.php-namespace-resolver",
+        "phproberto.vscode-php-getters-setters",
+        "mehedidracula.php-constructor",
+        "hakcorp.php-awesome-snippets",
+        "heberalmeida.php-snippets",
+        "onecentlin.laravel-blade",
+        "irongeek.vscode-env",
+        "shufo.vscode-blade-formatter",
+       "austenc.laravel-blade-spacer",
+        "amiralizadeh9480.laravel-extra-intellisense",
+        "cjhowe7.laravel-blade",
+        "cweijan.vscode-mysql-client2",
+        "mehedidracula.php-constructor",
+        "neilbrayfield.php-docblocker",
+        "mehedidracula.php-namespace-resolver",
+        "cweijan.dbclient-jdbc",
+        "emallin.phpunit",
+        "recca0120.vscode-phpunit",
+        "onecentlin.phpunit-snippets",
+        "danilopolani.yet-another-phpunit",
+        "santigarcor.phpunit-extended",
+        "PKief.material-icon-theme",
+        "formulahendry.auto-close-tag",
+        
+   ]
+}

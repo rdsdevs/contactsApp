@@ -54,7 +54,7 @@ Puede ver más información en el archivo **LICENSE**.
 
 ## 📂 Estructura de carpetas del proyecto
 
-1. "**.vscode**": En esta carpeta se encuentra el archivo settings.json el cual contiene la configuración del IDE (Entorno de Desarrollo Integrado).
+1. "**.vscode**": En esta carpeta se encuentra el archivo **settings.json** el cual contiene la configuración del IDE (Entorno de Desarrollo Integrado) y el archivo **extension.json** que contiene expensiones recomendadas para trabajar con PHP en **visual studio code**.
 
 2. "**db**": Contiene el script de creación de la base de datos del proyecto.
    Archivos contenidos:
